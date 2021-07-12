@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
     font-size: 14px;
-    background-color: #fff;
+    background-color: #f5f5f5;
     color: #404040;
   }
 `;
