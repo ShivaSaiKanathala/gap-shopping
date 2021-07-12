@@ -29,7 +29,21 @@ function App() {
     }
   }
 
-  function onDelete(item: any, status: string) {}
+  function onDelete(item: any, status: string) {
+    if (status === "active") {
+      const index = activeItems.indexOf(item);
+      if (index > -1) {
+        activeItems.splice(index, 1);
+        setActiveItems([...activeItems]);
+      }
+    } else if (status === "inactive") {
+      const index = inactiveItems.indexOf(item);
+      if (index > -1) {
+        inactiveItems.splice(index, 1);
+        setInactiveItems([...inactiveItems]);
+      }
+    }
+  }
 
   return (
     <div>
