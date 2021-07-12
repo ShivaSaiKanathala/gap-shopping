@@ -5,7 +5,7 @@ type ButtonProps = {
 };
 
 export const ButtonContainer = styled.button`
-  height: 36px;
+  height: 40px;
   padding: 8px 24px;
   border: 0 none;
   border-radius: 4px;

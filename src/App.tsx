@@ -1,8 +1,13 @@
 import React from "react";
-import { Button } from "./components";
+import { Button, QuantityInput } from "./components";
 
 function App() {
-  return <div>Hello World!</div>;
+  return (
+    <div>
+      <Button variant="primary">Button</Button>
+      <QuantityInput value={10} />
+    </div>
+  );
 }
 
 export default App;
