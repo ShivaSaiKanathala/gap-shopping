@@ -7,23 +7,48 @@ import {
 } from "./list-item-components";
 
 type Props = {
+  type: "active" | "inactive";
   name: string;
+  quantity: number;
+  onQuantityChange: (e: any) => void;
+  onChangeStatus: (e: any) => void;
+  onDelete: (e: any) => void;
 };
 
-export default function List({ name }: Props) {
+export default function List({
+  type,
+  name,
+  quantity,
+  onQuantityChange,
+  onChangeStatus,
+  onDelete,
+}: Props) {
   return (
     <ListItemContainer>
       <ListItemRow>
         <ItemName>{name}</ItemName>
       </ListItemRow>
       <ListItemRow>
-        <QuantityInput value={10} />
+        {type === "active" && (
+          <QuantityInput value={quantity} onChange={onQuantityChange} />
+        )}
       </ListItemRow>
       <ListItemRow>
-        <Button variant="danger">Delete</Button>
+        <Button variant="danger" onClick={onDelete}>
+          Delete
+        </Button>
       </ListItemRow>
       <ListItemRow>
-        <Button variant="primary">Save for Later</Button>
+        {type === "active" && (
+          <Button variant="primary" onClick={onChangeStatus}>
+            Save for Later
+          </Button>
+        )}
+        {type === "inactive" && (
+          <Button variant="success" onClick={onChangeStatus}>
+            Move to Active
+          </Button>
+        )}
       </ListItemRow>
     </ListItemContainer>
   );

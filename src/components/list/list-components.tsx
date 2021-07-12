@@ -18,3 +18,9 @@ export const Title = styled.div`
   font-size: 1.1rem;
   font-weight: 500;
 `;
+
+export const EmptyListItem = styled.div`
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 1.1rem;
+`;

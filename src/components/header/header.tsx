@@ -1,11 +1,17 @@
 import React from "react";
 import { HeaderContainer, Title, Summary } from "./header-components";
 
-export default function Header() {
+type Props = {
+  itemCount: number;
+};
+
+export default function Header({ itemCount }: Props) {
   return (
     <HeaderContainer>
       <Title>Gap Shopping Bag</Title>
-      <Summary>2 Items</Summary>
+      <Summary>
+        {itemCount + " " + (itemCount === 1 ? "Item" : "Items")}
+      </Summary>
     </HeaderContainer>
   );
 }
