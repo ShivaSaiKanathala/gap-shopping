@@ -1,5 +1,6 @@
 import React from "react";
-import { ListContainer, Title } from "./list-components";
+import { ListItem } from "../../components";
+import { ListAndTitleContainer, ListContainer, Title } from "./list-components";
 
 type Props = {
   title: string;
@@ -7,8 +8,12 @@ type Props = {
 
 export default function List({ title }: Props) {
   return (
-    <ListContainer>
+    <ListAndTitleContainer>
       <Title>{title}</Title>
-    </ListContainer>
+      <ListContainer>
+        <ListItem name="Item 1" />
+        <ListItem name="Item 2" />
+      </ListContainer>
+    </ListAndTitleContainer>
   );
 }

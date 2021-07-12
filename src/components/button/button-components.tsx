@@ -5,8 +5,9 @@ type ButtonProps = {
 };
 
 export const ButtonContainer = styled.button`
-  height: 40px;
+  height: 36px;
   padding: 8px 24px;
+  white-space: nowrap;
   border: 0 none;
   border-radius: 4px;
   outline: none;
