@@ -11,9 +11,10 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 `;
 
 export const Summary = styled.div`
   font-size: 1.1rem;
+  cursor: pointer;
 `;

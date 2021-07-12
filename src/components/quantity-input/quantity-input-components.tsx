@@ -7,10 +7,6 @@ export const InputContainer = styled.div`
   background-color: rgb(250, 251, 252);
   border: 2px solid rgb(223, 225, 230);
   border-radius: 4px;
-  box-sizing: border-box;
-  * {
-    box-sizing: border-box;
-  }
 `;
 
 export const Input = styled.input`
