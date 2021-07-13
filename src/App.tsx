@@ -9,7 +9,6 @@ function App() {
   const [, updateItem] = useState<any>();
 
   function onQuantityChange(item: any, quantity: number) {
-    console.log(item, quantity);
     item.quantity = quantity;
     updateItem({ ...item });
   }
