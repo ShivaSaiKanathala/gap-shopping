@@ -24,7 +24,6 @@ export default function List({
   onChangeStatus,
   onDelete,
 }: Props) {
-  console.log(list);
   return (
     <ListAndTitleContainer>
       <Title>{title}</Title>

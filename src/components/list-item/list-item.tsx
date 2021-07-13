@@ -15,7 +15,7 @@ type Props = {
   onDelete: (e: any) => void;
 };
 
-export default function List({
+export default function ListItem({
   type,
   name,
   quantity,
