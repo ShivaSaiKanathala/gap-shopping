@@ -12,21 +12,21 @@ export default function QuantityInput({ value, onChange }: Props) {
   function increment() {
     if (quantity < 100) {
       setQuantity(quantity + 1);
-      onChange(quantity);
+      onChange(quantity + 1);
     }
   }
 
   function decrement() {
     if (quantity > 1) {
       setQuantity(quantity - 1);
-      onChange(quantity);
+      onChange(quantity - 1);
     }
   }
 
   return (
     <InputContainer>
       <Button onClick={decrement}>-</Button>
-      <Input type="number" min="1" value={quantity} readOnly />
+      <Input>{quantity}</Input>
       <Button onClick={increment}>+</Button>
     </InputContainer>
   );

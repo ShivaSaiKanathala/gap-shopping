@@ -6,9 +6,12 @@ import { AppContainer } from "./app-components";
 function App() {
   const [activeItems, setActiveItems] = useState(data.activeItems);
   const [inactiveItems, setInactiveItems] = useState(data.inactiveItems);
+  const [, updateItem] = useState<any>();
 
   function onQuantityChange(item: any, quantity: number) {
-    //need to update quantity
+    console.log(item, quantity);
+    item.quantity = quantity;
+    updateItem({ ...item });
   }
 
   function onChangeStatus(item: any, status: string) {

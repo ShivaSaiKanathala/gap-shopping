@@ -9,23 +9,14 @@ export const InputContainer = styled.div`
   border-radius: 4px;
 `;
 
-export const Input = styled.input`
+export const Input = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
   width: 36px;
   height: 100%;
-  text-align: center;
-  background: inherit;
-  border: none;
-  outline: none;
   font-size: 1.2rem;
-  &::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  &[type="number"] {
-    -moz-appearance: textfield;
-  }
 `;
 
 export const Button = styled.div`
